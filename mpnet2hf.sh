@@ -1,0 +1,1 @@
+python3 mpnet2hf.py --mpnet_checkpoint_path "best.pt" --pytorch_dump_folder_path "dump"
