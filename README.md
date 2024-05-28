@@ -16,7 +16,7 @@ We implement MPNet and this pre-training toolkit based on the codebase of [fairs
 ```
 pip install numpy==1.22.2
 pip install --editable pretraining/
-pip install pytorch_transformers==1.0.0 transformers scipy scikit-learn
+pip install pytorch_transformers==1.0.0 transformers==4.28.0 scipy scikit-learn
 ```
 
 
