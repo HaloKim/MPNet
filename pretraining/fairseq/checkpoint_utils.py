@@ -306,8 +306,6 @@ def _upgrade_state_dict(state):
     # set any missing default values in the task, model or other registries
     state['args'].__dict__.pop('task')
     state['args'].__dict__.pop('criterion')
-    registry.set_defaults(state['args'], tasks.TASK_REGISTRY[state['args'].task])
-    registry.set_defaults(state['args'], models.ARCH_MODEL_REGISTRY[state['args'].arch])
     for registry_name, REGISTRY in registry.REGISTRIES.items():
         choice = getattr(state['args'], registry_name, None)
         if choice is not None:

@@ -6,7 +6,7 @@ import os
 from collections import Counter
 from multiprocessing import Pool
 
-from transformers import BertTokenizer
+from transformers import BertTokenizer, AutoTokenizer
 
 
 def main():
@@ -71,8 +71,8 @@ class MultiprocessingEncoder(object):
 
     def initializer(self):
         global bpe
-        bpe = BertTokenizer.from_pretrained('bert-base-uncased')
-
+        # bpe = BertTokenizer.from_pretrained('bert-base-uncased')
+        bpe = BertTokenizer.from_pretrained("my_tokenizer")
     def encode(self, line):
         global bpe
         subword = bpe._tokenize(line)

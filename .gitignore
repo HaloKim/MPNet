@@ -145,3 +145,10 @@ static
 
 *.pt
 *.bin
+
+*.log
+*.txt
+*.bpe
+*.bin
+*.idx
+my_tokenizer/**
